@@ -2,8 +2,8 @@
 
 .hero {
   text-align: center;
-  padding-top: 170px;
-  min-height:400px;
+  padding-top: 80px;
+  min-height:300px;
 
   .small-image {
     max-width: 150px;
@@ -27,6 +27,11 @@
     color: @primary-alt;
   }
 
+  &.yoco {
+    background-color: @yoco;
+    color: @primary-alt;
+  }
+
   &.light {
     background-color: @light-gray;
   }
@@ -47,5 +52,34 @@ hr {
   &.divider {
     width: 60%;
     margin: 0 auto 0 auto;
+  }
+}
+
+.framed-image {
+  border-radius: 100%;
+  height: 400px;
+  width: 400px;
+}
+
+a {
+  text-decoration: none;
+  color: @primary;
+
+  &:hover {
+    color: @primary;
+  }
+}
+
+.nav-link {
+  padding: 10px 20px;
+
+  &.active {
+    border-bottom: 3px solid @primary;
+    font-weight: 600;
+  }
+
+  &:hover {
+    color: @primary;
+    border-bottom: 3px solid @light-blue;
   }
 }

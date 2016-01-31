@@ -1,3 +1,49 @@
 <template name="applicationLayout">
+  {{> nav}}
   {{> yield}}
+  <footer class="animated fadeInUp">
+    <div class="container centered">
+      <div class="row">
+        <div class="four columns">
+          <a href="https://twitter.com/cwattrus" target="_blank">
+            <i class="icon-social-twitter"></i> Find me on Twitter
+          </a>
+        </div>
+        <div class="four columns">
+          <a href="https://dribbble.com/cwattrus" target="_blank">
+            <i class="icon-social-dribbble"></i> See my Dribbble
+          </a>
+        </div>
+        <div class="four columns">
+          <a href="https://github.com/cwattrus" target="_blank">
+            <i class="icon-social-github"></i> Checkout my GitHub
+          </a>
+        </div>
+      </div>
+  </div>
+</footer>
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+<link href="https://file.myfontastic.com/bF57tFQcusPqpWVm9uTtqM/icons.css" rel="stylesheet">
+</template>
+
+<template name="nav">
+  <div class="container">
+    <div class="row  animated fadeInDown">
+      <div class="four columns">
+        <strong>Craig Wattrus</strong>
+      </div>
+      <div class="two columns">
+        <a href="{{pathFor route='home'}}" class="nav-link {{#if isActive 'home'}}active{{/if}}">Home</a>
+      </div>
+      <div class="two columns">
+        <a href="{{pathFor route='skills'}}" class="nav-link {{#if isActive 'skills'}}active{{/if}}">Skills</a>
+      </div>
+      <div class="two columns">
+        <a href="{{pathFor route='work'}}" class="nav-link {{#if isActive 'work'}}active{{/if}}">Work</a>
+      </div>
+      <div class="two columns">
+        <a href="{{pathFor route='projects'}}" class="nav-link {{#if isActive 'projects'}}active{{/if}}">Projects</a>
+      </div>
+    </div>
+  </div>
 </template>
