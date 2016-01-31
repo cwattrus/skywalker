@@ -1,0 +1,51 @@
+@import 'colors.less';
+
+.hero {
+  text-align: center;
+  padding-top: 170px;
+  min-height:400px;
+
+  .small-image {
+    max-width: 150px;
+  }
+}
+
+.container {
+  padding: 30px;
+
+  &.full-width {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  &.centered {
+    text-align: center;
+  }
+
+  &.primary {
+    background-color: @primary;
+    color: @primary-alt;
+  }
+
+  &.light {
+    background-color: @light-gray;
+  }
+
+  &.no-padding-bottom {
+      padding-bottom: 0;
+  }
+}
+
+.padding-top {
+  padding-top: 40px;
+}
+
+hr {
+  &.primary {
+    border-bottom: 3px solid @primary;
+  }
+  &.divider {
+    width: 60%;
+    margin: 0 auto 0 auto;
+  }
+}
