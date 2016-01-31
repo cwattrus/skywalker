@@ -9,6 +9,14 @@ Router.route("/", {
   action: function () {
     // render all templates and regions for this route
     this.render();
+  },
+  onAfterAction: function() {
+    if (!Meteor.isClient) {
+      return;
+    }
+    SEO.set({
+      title: "Hello Human - Craig Wattrus",
+    });
   }
 });
 
@@ -19,7 +27,16 @@ Router.route("/skills", {
   action: function () {
     // render all templates and regions for this route
     this.render();
+  },
+  onAfterAction: function() {
+    if (!Meteor.isClient) {
+      return;
+    }
+    SEO.set({
+      title: "My Skillset - Craig Wattrus",
+    });
   }
+
 });
 
 Router.route("/work", {
@@ -29,7 +46,16 @@ Router.route("/work", {
   action: function () {
     // render all templates and regions for this route
     this.render();
+  },
+  onAfterAction: function() {
+    if (!Meteor.isClient) {
+      return;
+    }
+    SEO.set({
+      title: "My Work - Craig Wattrus",
+    });
   }
+
 });
 
 Router.route("/projects", {
@@ -39,5 +65,14 @@ Router.route("/projects", {
   action: function () {
     // render all templates and regions for this route
     this.render();
+  },
+  onAfterAction: function() {
+    if (!Meteor.isClient) {
+      return;
+    }
+    SEO.set({
+      title: "Side Projects - Craig Wattrus",
+    });
   }
+
 });
